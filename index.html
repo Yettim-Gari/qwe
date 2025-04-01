@@ -1,0 +1,89 @@
+<!DOCTYPE html><html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biography</title>
+    <style>
+        @font-face {
+            font-family: 'Minecraft';
+            src: url('minecraft.ttf') format('truetype');
+        }
+        body {
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            font-family: 'Minecraft', Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        h1 {
+            font-size: 36px;
+            color: darkgreen;
+            text-shadow: 0 0 10px limegreen, 0 0 20px green;
+        }
+        a {
+            color: lightblue;
+            text-decoration: none;
+        }
+        .lang-select {
+            margin-bottom: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function changeLanguage(lang) {
+            document.querySelectorAll('.content').forEach(el => el.classList.add('hidden'));
+            document.getElementById(lang).classList.remove('hidden');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Biography</h1>
+        <div class="lang-select">
+            <button onclick="changeLanguage('kz')">Қазақша</button>
+            <button onclick="changeLanguage('ru')">Русский</button>
+            <button onclick="changeLanguage('en')">English</button>
+        </div><div id="kz" class="content hidden">
+        <p>Аты: Bakzhol Sadyrzhanuly</p>
+        <p>Лақап аты: Yettim Gari</p>
+        <p>Мен Қазақстаннанмын</p>
+        <p>Туған күнім: 18.04.2009</p>
+        <p>GitHub: <a href="https://github.com/Yettim-Gari" target="_blank">Yettim-Gari</a></p>
+        <p>Telegram: @bedxl (нөмір маған тиесілі емес, бірақ аккаунт менікі)</p>
+        <p>WhatsApp: +1 (825) 592-6821 (нөмір маған тиесілі емес, бірақ аккаунт менікі)</p>
+    </div>
+    
+    <div id="ru" class="content">
+        <p>Имя: Bakzhol Sadyrzhanuly</p>
+        <p>Псевдоним: Yettim Gari</p>
+        <p>Я из Казахстана</p>
+        <p>День рождения: 18.04.2009</p>
+        <p>GitHub: <a href="https://github.com/Yettim-Gari" target="_blank">Yettim-Gari</a></p>
+        <p>Telegram: @bedxl (номер не имеет отношения ко мне, но аккаунт мой)</p>
+        <p>WhatsApp: +1 (825) 592-6821 (номер не имеет отношения ко мне, но аккаунт мой)</p>
+    </div>
+    
+    <div id="en" class="content hidden">
+        <p>Name: Bakzhol Sadyrzhanuly</p>
+        <p>Nickname: Yettim Gari</p>
+        <p>I am from Kazakhstan</p>
+        <p>Birthday: 18.04.2009</p>
+        <p>GitHub: <a href="https://github.com/Yettim-Gari" target="_blank">Yettim-Gari</a></p>
+        <p>Telegram: @bedxl (the number is not mine, but the account is mine)</p>
+        <p>WhatsApp: +1 (825) 592-6821 (the number is not mine, but the account is mine)</p>
+    </div>
+</div>
+
+</body>
+</html>
